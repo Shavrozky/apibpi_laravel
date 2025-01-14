@@ -3,19 +3,16 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\KategoriResource\Pages;
-use App\Filament\Resources\KategoriResource\RelationManagers;
-use App\Models\Kategori;
+use App\Models\Categories;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class KategoriResource extends Resource
+class CategoriesResource extends Resource
 {
-    protected static ?string $model = Kategori::class;
+    protected static ?string $model = Categories::class;
 
     protected static ?string $navigationIcon = 'heroicon-c-folder-minus';
 
@@ -56,9 +53,9 @@ class KategoriResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListKategoris::route('/'),
-            'create' => Pages\CreateKategori::route('/create'),
-            'edit' => Pages\EditKategori::route('/{record}/edit'),
+            'index' => Pages\ListCategories::route('/'),
+            'create' => Pages\CreateCategories::route('/create'),
+            'edit' => Pages\EditCategories::route('/{record}/edit'),
         ];
     }
 }

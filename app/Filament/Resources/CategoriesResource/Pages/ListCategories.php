@@ -2,13 +2,13 @@
 
 namespace App\Filament\Resources\KategoriResource\Pages;
 
-use App\Filament\Resources\KategoriResource;
+use App\Filament\Resources\CategoriesResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListKategoris extends ListRecords
+class ListCategories extends ListRecords
 {
-    protected static string $resource = KategoriResource::class;
+    protected static string $resource = CategoriesResource::class;
 
     protected function getHeaderActions(): array
     {

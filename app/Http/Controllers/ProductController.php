@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produk;
+use App\Models\Products;
 use Illuminate\Http\JsonResponse;
 
-class ProdukController extends Controller
+class ProductController extends Controller
 {
     /**
      * Tampilkan daftar produk.
@@ -14,12 +14,11 @@ class ProdukController extends Controller
      */
     public function index(): JsonResponse
     {
-        // Ambil semua data produk beserta relasi kategori
-        $produks = Produk::with('kategori')->get();
+        $products = Products::with('categories')->get();
 
         return response()->json([
             'success' => true,
-            'data' => $produks,
+            'data' => $products,
         ]);
     }
 }

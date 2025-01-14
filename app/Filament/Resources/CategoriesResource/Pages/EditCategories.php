@@ -2,13 +2,14 @@
 
 namespace App\Filament\Resources\KategoriResource\Pages;
 
+use App\Filament\Resources\CategoriesResource;
 use App\Filament\Resources\KategoriResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditKategori extends EditRecord
+class EditCategories extends EditRecord
 {
-    protected static string $resource = KategoriResource::class;
+    protected static string $resource = CategoriesResource::class;
 
     protected function getHeaderActions(): array
     {

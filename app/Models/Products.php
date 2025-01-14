@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Produk extends Model
+class Products extends Model
 {
     use HasFactory;
 
@@ -30,6 +30,6 @@ class Produk extends Model
      */
     public function kategori(): BelongsTo
     {
-        return $this->belongsTo(Kategori::class);
+        return $this->belongsTo(Categories::class);
     }
 }

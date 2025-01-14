@@ -2,13 +2,13 @@
 
 namespace App\Filament\Resources\ProdukResource\Pages;
 
-use App\Filament\Resources\ProdukResource;
+use App\Filament\Resources\ProductResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditProduk extends EditRecord
+class EditProduct extends EditRecord
 {
-    protected static string $resource = ProdukResource::class;
+    protected static string $resource = ProductResource::class;
 
     protected function getHeaderActions(): array
     {
